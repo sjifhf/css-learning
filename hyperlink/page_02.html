@@ -6,19 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>page_02</title>
     <style>
-        body {
-            height: 100vh;
-            background: linear-gradient(to bottom, #bbe4e5, #33b8e0 );
-            ;
-            background-repeat: no-repeat;
+        .logo {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+
+        }
+
+        .test {
+            border-radius: 10px;
+            border: 2px solid red;
+            background-color: yellow;
+            height: 50px;
+
+            margin: 40px;
+            font-size: 40px;
+            padding: 20px 0px 25px 0px;
             text-align: center;
-            font-size: 50px;
+
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .page_link {
+            display: inline-flexbox;
+            min-width: 100%;
+        }
+
+        .page_01 {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+        .page_03 {
+            position: fixed;
+            bottom: 10px;
+            text-align: center;
+        }
+        body {
+            font-family: "Microsoft JhengHei", sans-serif;
+            height: 100vh;
+            background: linear-gradient(to bottom, #bbe4e5, #33b8e0);
+            background-repeat: no-repeat;
         }
 
         a {
+            margin: 15px;
             display: inline-block;
             color: #1565c0;
-            text-decoration: none;/* 移除底線 */
+            text-decoration: none;
+            /* 移除底線 */
             font-weight: bold;
             border: 1px solid #1565c0;
             border-radius: 10px;
@@ -26,11 +61,13 @@
             transition: all 1s ease;
         }
 
+
         a:hover {
             background-color: #1565c0;
             color: white;
             transform: scale(1.05);
         }
+
         img {
             margin: 20px 10px 0px 10px;
         }
@@ -38,12 +75,19 @@
 </head>
 
 <body>
-    <a href="https://www.google.com" target="_blank">
-        <img src="./image/googlelogo_light_color_92x30dp.png" alt="這是一個GOOGLE LOGO">
-    </a><br>
+    <p class="test">我是測試</p>
+    <div class="content">
+        <a class="logo" href="https://www.google.com" target="_blank">
+            <img src="./image/googlelogo_light_color_92x30dp.png" alt="這是一個GOOGLE LOGO">
+        </a><br>
+        <div class="page_link">
+            <a class="page page_01" href="./page_01.html">page01</a><br>
+            <a class="page page_03" href="./page_03.html">page03</a>
+        </div>
 
-    <a href="./page_01.html">page01</a><br>
-    <a href="./page_03.html">page03</a>
+    </div>
+
+
 
 </body>
 
