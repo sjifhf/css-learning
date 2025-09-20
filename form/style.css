@@ -1,0 +1,9 @@
+h1{
+    text-shadow: 10px 5px 10px #e47f7f ;
+}
+.shadow_box{
+    box-shadow: 10px 10px 5px grey;
+}
+.shadow_text{
+    text-shadow: 2px 2px 5px grey;
+}
