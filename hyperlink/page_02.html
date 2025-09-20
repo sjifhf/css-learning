@@ -1,16 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>page_02</title>
+    <style>
+        body {
+            height: 100vh;
+            background: linear-gradient(to bottom, #bbe4e5, #33b8e0 );
+            ;
+            background-repeat: no-repeat;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        a {
+            display: inline-block;
+            color: #1565c0;
+            text-decoration: none;/* 移除底線 */
+            font-weight: bold;
+            border: 1px solid #1565c0;
+            border-radius: 10px;
+            padding: 10px 4px;
+            transition: all 1s ease;
+        }
+
+        a:hover {
+            background-color: #1565c0;
+            color: white;
+            transform: scale(1.05);
+        }
+        img {
+            margin: 20px 10px 0px 10px;
+        }
+    </style>
 </head>
-<body style="background-color: #222;">
-    <!-- Google icon hyperlink -->
+
+<body>
     <a href="https://www.google.com" target="_blank">
-        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_92x30dp.png" alt="Google" style="height:40px;">
+        <img src="./image/googlelogo_light_color_92x30dp.png" alt="這是一個GOOGLE LOGO">
     </a><br>
-    <a href="./page_01.html">page01</a>
+
+    <a href="./page_01.html">page01</a><br>
     <a href="./page_03.html">page03</a>
+
 </body>
+
 </html>
