@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page_01</title>
+    <style>
+        body {
+            /* 由上到下的藍紫漸層 */
+            background: linear-gradient(to right, #bbe4e5, #de7070);
+        }
+    </style>
+</head>
+<body id="top">
+    <h1 id="top">這是第一頁的目錄</h1>
+    <ul>
+        <li><a href="#text_01">敘述一</a></li>
+        <li><a href="#text_02">敘述二</a></li>
+    </ul>
+
+    <a href="./page_02.html">page02</a><br>
+    <a href="./page_02.html#page_02_text_01">跳轉page2 敘述一</a>
+
+    <p id="text_01" style="margin-top: 800px;">這裡是第一段敘述XXX</p>
+    <p id="text_02" style="margin-top: 800px;">這裡是第二段敘述YYY</p>
+
+    <a href="#top">回到頂端</a>
+</body>
+</html>
