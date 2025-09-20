@@ -1,11 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>page_01</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>page2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft JhengHei", sans-serif;
+            min-height: 100vh;
+            background-image: url('./image/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 1rem;
+            color: white;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 1s ease;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes slide_left {
+            from {
+                transform: translateX(100);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .animate-slide {
+            animation: slide_left 0.5s ease-in-out forwards;
+        }
+    </style>
 </head>
+
 <body>
-    <a href="./page_01.html" ><h1>page01</h1></a>
+    <a style="position: fixed; bottom: 10px;color: aliceblue;font-size: 50px;" href="./page_01.html">page1</a>
+    <div class="container">
+        
+        <h1>歡迎</h1>
+        <p>你好</p>
+        <button id="myButton">按我試試看</button>
+    </div>
 </body>
+
 </html>
