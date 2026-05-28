@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub LFS 推送方法</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft JhengHei', 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .slide {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 1000px;
+            width: 100%;
+            padding: 60px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            color: #2d3748;
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            color: #667eea;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 26px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h2::before {
+            content: '▸';
+            color: #764ba2;
+        }
+        
+        .step {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        
+        .step:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .code {
+            background: #2d3748;
+            color: #48bb78;
+            padding: 12px 16px;
+            border-radius: 6px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 14px;
+            margin-top: 8px;
+            overflow-x: auto;
+        }
+        
+        .note {
+            background: #fef5e7;
+            border-left: 4px solid #f39c12;
+            padding: 12px 16px;
+            border-radius: 6px;
+            color: #7d6608;
+            font-size: 14px;
+        }
+        
+        .note::before {
+            content: '💡 ';
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="header">
+            <h1>GitHub LFS 推送方法</h1>
+            <div class="subtitle">Large File Storage 大檔案管理</div>
+        </div>
+        
+        <div class="section">
+            <h2>安裝與設定</h2>
+            <div class="step">
+                <span class="step-number">1</span>
+                <strong>安裝 Git LFS</strong>
+                <div class="code">git lfs install</div>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">2</span>
+                <strong>追蹤大檔案類型</strong>（例如：圖片、影片、模型檔）
+                <div class="code">git lfs track "*.psd"<br>git lfs track "*.mp4"<br>git lfs track "*.zip"</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>推送流程</h2>
+            <div class="step">
+                <span class="step-number">3</span>
+                <strong>確認 .gitattributes 已被追蹤</strong>
+                <div class="code">git add .gitattributes</div>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">4</span>
+                <strong>加入大檔案</strong>
+                <div class="code">git add your-large-file.psd</div>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">5</span>
+                <strong>提交變更</strong>
+                <div class="code">git commit -m "Add large files via LFS"</div>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">6</span>
+                <strong>推送到 GitHub</strong>
+                <div class="code">git push origin main</div>
+            </div>
+        </div>
+        
+        <div class="note">
+            <strong>提醒：</strong>使用 <code>git lfs ls-files</code> 可查看已被 LFS 追蹤的檔案清單
+        </div>
+    </div>
+</body>
+</html>
